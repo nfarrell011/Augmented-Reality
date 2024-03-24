@@ -1,0 +1,17 @@
+cmake_minimum_required(VERSION 3.10)
+project(ar)
+find_package(OpenCV REQUIRED)
+add_executable(ar utils.cpp caliberate.cpp) 
+target_link_libraries(ar ${OpenCV_LIBS})
+
+add_executable(pr utils.cpp project_points.cpp) 
+target_link_libraries(pr ${OpenCV_LIBS})
+
+add_executable(hr harris.cpp) 
+target_link_libraries(hr ${OpenCV_LIBS})
+
+
+
+
+
+
